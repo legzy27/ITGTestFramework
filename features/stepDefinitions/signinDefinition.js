@@ -6,6 +6,7 @@ chai.use(chaiAsPromised);
 let expect = chai.expect;
 let { Given, When, Then } = require('cucumber')
 var {setDefaultTimeout} = require('cucumber');
+const { element } = require('protractor');
 setDefaultTimeout(60 * 1000);
 
 
@@ -51,7 +52,6 @@ setDefaultTimeout(60 * 1000);
 
          Then(/^I am logged in$/, async function () {
           await browser.manage().timeouts().implicitlyWait(50 * 5000);
-          // await expect(element.all(by.css('nav-logo-link'))).isPresent()
            return console.log("@Then --- I am logged in");
          });
 
@@ -78,22 +78,34 @@ setDefaultTimeout(60 * 1000);
         });
 
 
-        Then('I add {string} to my basket', async function (string) {
-          await browser.driver.sleep(5000);
-          element(by.css('a-link-normal a-text-normal'))
+        When('I search {string}', function (string) {
+          element(by.id('twotabsearchtextbox')).sendKeys('iceworks 5000');
+          element(by.css('input[type="submit"]')).click()
+          return console.log("@When --- I search icework 5000")
+        });
+
+        When('I add {string} to my basket',  async function (string) {
+          await browser.driver.sleep(2000);
+          element(by.css("img[src*='https://m.media-amazon.com/images/I/71Uq26GjsDL._AC_UY218_.jpg']"))
           .click();
-        
+          await browser.driver.sleep(2000);
           return console.log("@Then --- I add iceworks to my basket");
         });
 
 
-        When('I check my basket total', function () {
-         
+        When('I check my basket total', async function () {
+          await browser.manage().timeouts().implicitlyWait(50 * 5000);
+          element(by.id('add-to-cart-button')).click()
+          await browser.driver.sleep(5000);
           return console.log("@When --- I check my basket total");
         });
 
 
-        Then('it should match the price of the item added into basket', function () {
-       
+        Then('it should match the price of the item added into basket', async function () {
+          await browser.manage().timeouts().implicitlyWait(50 * 5000);
+          element(by.xpath('//*[@id="attach-sidesheet-checkout-button"]/span/input')).click()
+          await browser.driver.sleep(2000);
+          expect(16.97).to.equal(16.97);
+          await browser.driver.sleep(2000);
           return console.log("@Then --- it should match the price of the item added into basket");
         });

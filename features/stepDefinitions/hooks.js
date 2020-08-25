@@ -13,13 +13,13 @@ AfterAll(function(){
 
 })
 
-Before("@test",function(){
+Before(function(){
 
     console.log("Inside Before Hook")
 
 })
 
-After("@test", function(){
+After(function(){
 
     console.log("Inside After Hook")
     

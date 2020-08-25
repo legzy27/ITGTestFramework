@@ -28,5 +28,3 @@ Pre-Requisites
 * Check json-output-folder for json report
 
 
-## Issues
-* Add product to basket element

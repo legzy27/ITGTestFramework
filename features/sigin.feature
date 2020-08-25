@@ -6,16 +6,16 @@ Feature: Signin
         Given Amazon.co.uk is open "https://www.amazon.co.uk/gp/cart/view.html?ref_=nav_cart"
         
     
-     @test
+ 
     Scenario: Sign into Amazon.co.uk
-    When I click Sign-in
+        When I click Sign-in
         And enter "username" username
         And I Continue
         And enter "password" password
         And I signed in
         Then I am logged in
 
-    @test
+  
     Scenario: Search for product add to basket
         When I search for "iceworks 5000"
         Then the search results are displayed
@@ -23,7 +23,8 @@ Feature: Signin
 
     @test
     Scenario: Check basket total
-        When I add "iceworks 5000" to my basket
+        When I search "iceworks 5000" 
+        Then I add "iceworks 5000" to my basket
         When I check my basket total
         Then it should match the price of the item added into basket
       
