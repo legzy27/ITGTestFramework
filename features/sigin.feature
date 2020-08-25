@@ -24,4 +24,6 @@ Feature: Signin
     @test
     Scenario: Check basket total
         When I add "iceworks 5000" to my basket
+        When I check my basket total
+        Then it should match the price of the item added into basket
       

@@ -6,7 +6,7 @@ Pre-Requisites
 * Install Node.js (latest version).
 
 ## Installation and Setup
-* Github: git clone 
+* Github: git clone https://github.com/legzy27/ITGTestFramework
 * Once you download the repository cd into the directory
 * Install necessary dependencies with `npm install` command before the tests can run locally
 
