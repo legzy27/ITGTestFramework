@@ -1,0 +1,152 @@
+[
+  {
+    "description": "    As A user I want to log on to Amazon, search out “Iceworks 5000”,\n    add to basket and verify the price of the item matches the checkout total.",
+    "keyword": "Feature",
+    "name": "Signin",
+    "line": 1,
+    "id": "signin",
+    "tags": [],
+    "uri": "features/sigin.feature",
+    "elements": [
+      {
+        "id": "signin;sign-into-amazon.co.uk",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Sign into Amazon.co.uk",
+        "tags": [
+          {
+            "name": "@test",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/stepDefinitions/hooks.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Amazon.co.uk is open \"https://www.amazon.co.uk/gp/cart/view.html?ref_=nav_cart\"",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 755000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I click Sign-in",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2522000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "enter \"username\" username",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I Continue",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 725000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "enter \"password\" password",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I signed in",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1484000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I am logged in",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20140000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/stepDefinitions/hooks.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

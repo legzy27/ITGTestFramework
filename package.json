@@ -1,0 +1,29 @@
+{
+  "name": "itg-testframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/cucumber-js",
+    "cuke": "node ./node_modules/.bin/cucumber-js --format=json:cucumber_report.json && node index.js",
+    "protractorcuke": "protractor protractor.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-smoothie": "^0.3.2",
+    "cucumber-html-reporter": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "mocha": "^8.1.1",
+    "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.1"
+  },
+  "dependencies": {
+    "cucumber": "^6.0.5",
+    "expect.js": "^0.3.1",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^6.2.1"
+  }
+}

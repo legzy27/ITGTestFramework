@@ -1,0 +1,85 @@
+[
+  {
+    "description": "    As A user I want to log on to Amazon, search out “Iceworks 5000”,\n    add to basket and verify the price of the item matches the checkout total.",
+    "keyword": "Feature",
+    "name": "Search for product",
+    "line": 1,
+    "id": "search-for-product",
+    "tags": [],
+    "uri": "features/search.feature",
+    "elements": [
+      {
+        "id": "search-for-product;search-for-product-add-to-basket",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Search for product add to basket",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Amazon.co.uk is open \"https://www.amazon.co.uk/gp/cart/view.html?ref_=nav_cart\"",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 866000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "when I search for \"iceworks 5000\"",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "the search results are displayed",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the search results has the \"iceworks 5000\" in it",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "84.0.4147.135"
+      },
+      "device": "",
+      "platform": {
+        "name": "",
+        "version": ""
+      }
+    }
+  }
+]

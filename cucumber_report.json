@@ -1,0 +1,141 @@
+[
+  {
+    "description": "    As A user I want to log on to Amazon, search out “Iceworks 5000”,\n    add to basket and verify the price of the item matches the checkout total.",
+    "keyword": "Feature",
+    "name": "Signin",
+    "line": 1,
+    "id": "signin",
+    "tags": [],
+    "uri": "features/sigin.feature",
+    "elements": [
+      {
+        "id": "signin;sign-into-amazon.co.uk",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Sign into Amazon.co.uk",
+        "tags": [
+          {
+            "name": "@test",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/stepDefinitions/hooks.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Amazon.co.uk is open",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I click Sign-in",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "enter \"username\" username",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I Continue",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "enter \"password\" password",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I signed in",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I am logged in",
+            "match": {
+              "location": "features/stepDefinitions/signinDefinition.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/stepDefinitions/hooks.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
